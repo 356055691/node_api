@@ -3,15 +3,15 @@ const mysql = require('mysql');
 
 exports.index = (req, res, next) => {
     let connection = mysql.createConnection({
-      host     : 'localhost',
+      host     : '47.92.141.244',
       user     : 'root',
-      password : '123456',
-      database : 'students_manage'
+      password : '012399lee',
+      database : 'lijing'
     });
     
     connection.connect();
  
-    let  sql = 'SELECT * FROM student';
+    let  sql = 'SELECT * FROM users';
     //查
     connection.query(sql,function (err, result) {
       if(err){

@@ -3,15 +3,15 @@ const mysql = require('mysql');
 
 exports.index = (req, res, next) => {
   let connection = mysql.createConnection({
-    host     : 'localhost',
+    host     : '47.92.141.244',
     user     : 'root',
-    password : '123456',
-    database : 'students_manage'
+    password : '012399lee',
+    database : 'lijing'
   });
   
   connection.connect();
 
-  let addSql = 'INSERT INTO student(id,name,age,sex,mobile) VALUES(0,?,?,?,?)';
+  let addSql = 'INSERT INTO users(id,name,age,sex,mobile) VALUES(0,?,?,?,?)';
   let query = req.query;
   let addSqlParams = [query.name || '未知', query.age || '0', query.sex || 1, query.mobile || '00000000000'];
   //增
