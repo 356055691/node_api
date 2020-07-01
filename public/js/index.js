@@ -4,7 +4,7 @@ function submit() {
   const age = $('#age').val();
   const mobile = $('#mobile').val();
   $.ajax({
-    url: `http://47.92.141.244:3000/api/add?name=${name}&age=${age}&sex=${sex}&mobile=${mobile}`,
+    url: `http://47.92.141.244:3000/my/add?name=${name}&age=${age}&sex=${sex}&mobile=${mobile}`,
     type: "GET",
     success: (res) => {
       refreshList();
@@ -14,7 +14,7 @@ function submit() {
 
 function refreshList() {
   $.ajax({
-    url: 'http://47.92.141.244:3000/api/getlist',
+    url: 'http://47.92.141.244:3000/my/getlist',
     type: "GET",
     success: (res) => {
       if (res && res.code && res.code === 200 && res.data) {

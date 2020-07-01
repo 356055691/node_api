@@ -9,7 +9,7 @@ router.get('/index', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/api/getlist', getlist.index);
-router.get('/api/add', add.index);
+router.get('/my/getlist', getlist.index);
+router.get('/my/add', add.index);
 
 module.exports = router;
